@@ -1,11 +1,30 @@
 
 
-
-
 main{
+    
 
-    display: flex;
+
+}
+
+
+form{
+   
+   display: grid;
+   margin-left: 20rem;
+  
+
+   
+   
+    
+}
+
+span{
+  
+    display: flex; 
     justify-content: center;
-    margin-bottom: 5rem;
+}
+.pn-container-2{
+
+   
 
 }
