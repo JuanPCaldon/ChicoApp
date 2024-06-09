@@ -1,15 +1,27 @@
 import React from 'react'
-import { Route, Router } from 'react-router'
+import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { LoginPage } from './pages/LoginPage'
+import { LandingPages } from './pages/LandingPages'
 
-export const App = () => {
+
+
+const App = () => {
   return (
+    <div>
     <Router>
-        <Route>
-           <Route path='/' element={<LoginPage/>} />
-           <Route path="/Landing" element= {<LandingPages />}/>  
-           <Route path="/movies/:movieId/:imagen" element = {<MovieDetails/> }/> 
-        </Route>    
+      
+     <Routes>
+        <Route path="/" element={<LandingPages />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    
+    
+    
+    </Router>  
 
-    </Router>
+
+    </div>
   )
 }
+
+export default App
