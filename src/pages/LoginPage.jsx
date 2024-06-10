@@ -28,7 +28,8 @@ export const LoginPage = () => {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      // Aquí puedes manejar el envío del formulario si no hay errores
+      
+      <Link to="/Landing">  </Link>
       console.log('Formulario enviado:', { email, password });
     }
   };
@@ -66,13 +67,12 @@ export const LoginPage = () => {
                           {errors.password && <p className="error">{errors.password}</p>}
                           <span>¿Olvidaste contraseña?</span>
 
-                          <button type='submit'> <Link to="/Landing"> Iniciar sesion </Link></button>
+                          <button type='submit'> Iniciar Sesion </button>
                          
                           <span> ¿Aun no tienes cuenta?</span>
-                          <button type='submit'>Registro</button>
+                          <button type='button'><Link to="/register"> Registrate aqui </Link></button>
                                
-                       
-                          
+                
 
                 </form>
 

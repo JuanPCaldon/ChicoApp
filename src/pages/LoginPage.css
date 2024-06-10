@@ -22,7 +22,6 @@ form{
 }   
   
 
-
 img{
 
     height:5rem;
@@ -30,11 +29,7 @@ img{
    
 }
 
-button{
-    width: 2rem;
 
-
-}
 
 .error {
     color: red;
@@ -42,3 +37,15 @@ button{
     margin-top: -10px;
     margin-bottom: 10px;
   }
+
+
+link{
+    text-decoration: none;
+   
+
+}  
+
+button{
+    text-decoration: none;
+   
+}
