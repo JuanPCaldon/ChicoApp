@@ -23,7 +23,7 @@ export const RegisterPage = () => {
         // poner ENDPOINT
         console.log('Formulario de Registro Enviado:', formData);
       };
-    
+//----------------------------------------------------------------------------------    
       return (
         <div className="register-page">
           <h2>Registro</h2>
