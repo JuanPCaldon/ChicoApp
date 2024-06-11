@@ -28,7 +28,11 @@ img{
     width: 5rem;
    
 }
+ 
+.lg-span-register{
 
+        margin-bottom: 12px;
+}
 
 
 .error {
@@ -39,13 +43,24 @@ img{
   }
 
 
-link{
+
+.lg-container-terminos{
+
+    display: flex;
+    gap: 7rem;
+  
+}
+   
+.lg-link{
+
     text-decoration: none;
+    color: aliceblue;
    
 
-}  
+}
 
-button{
-    text-decoration: none;
-   
+.lg-btn-register{
+
+        width: 26rem;
+
 }
