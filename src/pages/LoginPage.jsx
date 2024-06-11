@@ -34,7 +34,7 @@ export const LoginPage = () => {
     }
   };
 
-
+//----------------------------------------------------------------------------------
 
   return (
     <div className='pn-container-principal' >
@@ -62,16 +62,31 @@ export const LoginPage = () => {
 
 
                           />
-                          
-                          {errors.password && <p className="error">{errors.password}</p>}
-                          <span>¿Olvidaste contraseña?</span>
+                           {errors.password && <p className="error">{errors.password}</p>}
+                    
 
+
+
+                        <div className='lg-container-recuerdame' >
+                           <fieldset className='lg-container-terminos'>
+                                <label>
+                                  <input name="terms" type="checkbox" role="switch" />
+                                  Recuerdame
+                                </label>    
+
+                                <span>¿Olvidaste contraseña?</span>
+                           </fieldset>
+                         
+                        </div>
+
+                        
                           <button type='submit'> Iniciar Sesion </button>
                          
-                          <span> ¿Aun no tienes cuenta?</span>
-                          <button type='button'><Link to="/register"> Registrate aqui </Link></button>
-                               
-                
+                          <span className='lg-span-register'> ¿Aun no tienes cuenta?</span>
+                          <button className='lg-btn-register' type='button'><Link className='lg-link' to="/register"> Registrate aqui </Link></button>
+
+
+                        
 
                 </form>
 

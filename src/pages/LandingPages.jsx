@@ -1,8 +1,11 @@
 import React from 'react'
 
 export const LandingPages = () => {
-  return (
 
+//------------------------------------------------------------------aqui poner front end-------------------------------------
+
+  return (
+    
     <div>
           
         <h1>Landing</h1>
