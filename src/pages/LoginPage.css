@@ -11,9 +11,9 @@ main{
 form{    
     display: grid;
     width: 30rem;  
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+  
     padding: 2rem;
-    box-shadow: 0px 0px 20px  black; 
+   
     border-radius: 8px;
     
     justify-items: center;

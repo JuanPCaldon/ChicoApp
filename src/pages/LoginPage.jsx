@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './LoginPage.css'
+import InputText from '../components/atoms/Input/InputText.atom.jsx';
+import InputPassword from '../components/atoms/Input/InputPassword.atom'
+
+
+
 export const LoginPage = () => {
 
   const [email, setEmail] = useState('');
@@ -44,24 +49,40 @@ export const LoginPage = () => {
                 <form onSubmit={handleSubmit} >
                     <img src="./Recurso_12x.png" alt="chico" />
                         <h2>Iniciar Sesion </h2>
-                          <input 
+
+
+                         <InputText 
+                              name="IN-LG-Email" 
+                              value={email} 
+                              placeholder='Email o número de telefono'
+                              onChange={(e) => setEmail(e.target.value)} 
+                              
+                              />
+
+                          {/* <input 
                              type="text"
                              placeholder="Email o número de teléfono"
                              value={email}
                              onChange={(e) => setEmail(e.target.value)}
                       
-                          />
+                          /> */}
                            {errors.email && <p className="error">{errors.email}</p>}
 
-
-                          <input 
+                          <InputPassword 
+                              name="IN-LG-Password" 
+                              value={password}
+                              placeholder='Contraseña'
+                              onChange={(e) => setPassword(e.target.value)} 
+                               
+                          />   
+                          {/* <input 
                              type="password" 
                              placeholder="Contraseña"
                              value={password}
                              onChange={(e) => setPassword(e.target.value)}
 
 
-                          />
+                          /> */}
                            {errors.password && <p className="error">{errors.password}</p>}
                     
 
