@@ -5,10 +5,7 @@ import InputText from '../components/atoms/Input/InputText.atom.jsx';
 import InputPassword from '../components/atoms/Input/InputPassword.atom'
 import Heading from '../components/atoms/Labels/Heading.atom.jsx';
 import Checkbox from '../components/atoms/Input/Checkbox.atom.jsx';
-import  Button from '../components/atoms/Button/Button.atom.jsx';
-
-
-
+import Button from '../components/atoms/Button/Button.atom.jsx';
 
 export const LoginPage = () => {
 
@@ -33,52 +30,60 @@ export const LoginPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const url = 'http://localhost:3000/login';
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      
-      <Link to="/Landing">  </Link>
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      }).then(response => response.json()).then(data => {
+        console.log(data);
+      })
+
+      // <Link to="/Landing">  </Link>
       console.log('Formulario enviado:', { email, password });
     }
   };
 
-//----------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------
 
   return (
     <div className='pn-container-principal' >
-    
-           <main> 
-             
-                <form onSubmit={handleSubmit} >
-                    <img src="./Recurso_12x.png" alt="chico" />
-                    {/* <Heading level={1} className="custom-heading">
+
+      <main>
+
+        <form onSubmit={handleSubmit} >
+          <img src="./Recurso_12x.png" alt="chico" />
+          <Heading level={1} className="custom-heading">
                         Iniciar Sesion
-                    </Heading> */}
-                    <h1>Iniciar Sesion</h1>
+                    </Heading>
 
-                         <InputText 
-                              name="IN-LG-Email" 
-                              value={email} 
-                              placeholder='Email o número de telefono'
-                              onChange={(e) => setEmail(e.target.value)} 
-                              
-                              />
+          <InputText
+            name="IN-LG-Email"
+            value={email}
+            placeholder='Email o número de telefono'
+            onChange={(e) => setEmail(e.target.value)}
 
-                      
-                           {errors.email && <p className="error">{errors.email}</p>}
+          />
 
-                          <InputPassword 
-                              name="IN-LG-Password" 
-                              value={password}
-                              placeholder='Contraseña'
-                              onChange={(e) => setPassword(e.target.value)} 
-                               
-                          />   
-                     
-                           {errors.password && <p className="error">{errors.password}</p>}
-                    
-{/* 
+          {errors.email && <p className="error">{errors.email}</p>}
+
+          <InputPassword
+            name="IN-LG-Password"
+            value={password}
+            placeholder='Contraseña'
+            onChange={(e) => setPassword(e.target.value)}
+
+          />
+
+          {errors.password && <p className="error">{errors.password}</p>}
+
+          {/* 
                            <Checkbox
                                   id="exampleCheckbox"
                                   name="example"
@@ -107,27 +112,16 @@ export const LoginPage = () => {
                               />
                             <span>¿No tienes cuenta? </span>
 
-                            <Button 
-                             className="primary" 
-                             label="Registrate" 
-                             type="button"
-                             navigateTo={"/register "}
-                            />
-                                 
-                          
+          <Button
+            className="primary"
+            label="Registrate"
+            type="button"
+            navigateTo={"/register "}
+          />
 
-                      
+        </form>
 
-
-                        
-
-                </form>
-
-
-
-           </main>
-
-
+      </main>
 
     </div>
   )
