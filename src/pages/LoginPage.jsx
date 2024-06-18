@@ -92,24 +92,25 @@ export const LoginPage = () => {
                                   label="Recuerdame"
                                 /> */}
 
-          <Link href="https://example.com" className="custom-link"
-          // onClick={handleLinkClick}
-          >
-            ¿Olvidaste tu contraseña?
-          </Link>
+                       
 
-          <Button
-            className="primary"
-            label="Ingresar"
-            type="submit"
-          // navigateTo={"/components "}
-          />
+                            <Link href="https://example.com" className="custom-link"
+                                      // onClick={handleLinkClick}
+                                      >
+                                      ¿Olvidaste tu contraseña?
+                                    </Link>
 
-          <Link href="https://example.com" className="custom-link"
-          // onClick={handleLinkClick}
-          >
-            ¿No tienes cuenta?
-          </Link>
+
+                         
+        
+                        
+                            <Button 
+                              className="primary" 
+                              label="Ingresar" 
+                              type="submit" 
+                            
+                              />
+                            <span>¿No tienes cuenta? </span>
 
           <Button
             className="primary"

@@ -72,6 +72,8 @@ export const RegisterPage = () => {
             value={formData.fullName}
             onChange={handleChange}
           />
+
+          
           {errors.fullName && <p>{errors.fullName}</p>}
           <input
             type="email"
