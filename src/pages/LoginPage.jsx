@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import './LoginPage.css'
 import InputText from '../components/atoms/Input/InputText.atom.jsx';
 import InputPassword from '../components/atoms/Input/InputPassword.atom'
+import Heading from '../components/atoms/Labels/Heading.atom.jsx';
+import Checkbox from '../components/atoms/Input/Checkbox.atom.jsx';
+import  Button from '../components/atoms/Button/Button.atom.jsx';
+
 
 
 
@@ -48,8 +52,9 @@ export const LoginPage = () => {
              
                 <form onSubmit={handleSubmit} >
                     <img src="./Recurso_12x.png" alt="chico" />
-                        <h2>Iniciar Sesion </h2>
-
+                    {/* <Heading level={1} className="custom-heading">
+                        Iniciar Sesion
+                    </Heading> */}
 
                          <InputText 
                               name="IN-LG-Email" 
@@ -59,13 +64,7 @@ export const LoginPage = () => {
                               
                               />
 
-                          {/* <input 
-                             type="text"
-                             placeholder="Email o número de teléfono"
-                             value={email}
-                             onChange={(e) => setEmail(e.target.value)}
                       
-                          /> */}
                            {errors.email && <p className="error">{errors.email}</p>}
 
                           <InputPassword 
@@ -75,36 +74,54 @@ export const LoginPage = () => {
                               onChange={(e) => setPassword(e.target.value)} 
                                
                           />   
-                          {/* <input 
-                             type="password" 
-                             placeholder="Contraseña"
-                             value={password}
-                             onChange={(e) => setPassword(e.target.value)}
-
-
-                          /> */}
+                     
                            {errors.password && <p className="error">{errors.password}</p>}
                     
+{/* 
+                           <Checkbox
+                                  id="exampleCheckbox"
+                                  name="example"
+                                  checked={false}
+                                  // onChange={handleCheckbxoChange}
+                                  label="Recuerdame"
+                                /> */}
+
+                       
+
+                            <Link href="https://example.com" className="custom-link"
+                                      // onClick={handleLinkClick}
+                                      >
+                                      ¿Olvidaste tu contraseña?
+                                    </Link>
 
 
-
-                        <div className='lg-container-recuerdame' >
-                           <fieldset className='lg-container-terminos'>
-                                <label>
-                                  <input name="terms" type="checkbox" role="switch" />
-                                  Recuerdame
-                                </label>    
-
-                                <span>¿Olvidaste contraseña?</span>
-                           </fieldset>
                          
-                        </div>
-
+        
                         
-                          <button type='submit'> Iniciar Sesion </button>
+                            <Button 
+                              className="primary" 
+                              label="Ingresar" 
+                              type="button" 
+                              navigateTo={"/components "}
+                              />
+
                          
-                          <span className='lg-span-register'> ¿Aun no tienes cuenta?</span>
-                          <button className='lg-btn-register' type='button'><Link className='lg-link' to="/register"> Registrate aqui </Link></button>
+                            <Link href="https://example.com" className="custom-link"
+                                      // onClick={handleLinkClick}
+                                      >
+                                      ¿No tienes cuenta?
+                                    </Link>
+
+                            <Button 
+                             className="primary" 
+                             label="Registrate" 
+                             type="button"
+                             navigateTo={"/register "}
+                            />
+                                 
+                          
+
+                      
 
 
                         
