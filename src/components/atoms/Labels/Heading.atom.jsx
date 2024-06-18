@@ -32,9 +32,9 @@ Heading.propTypes = {
     onClick: PropTypes.func,
 };
 
-Heading.defaultProps = {
-    className: '',
-    onClick: null,
-};
+// Heading.defaultProps = {
+//     className: '',
+//     onClick: null,
+// };
 
 export default Heading;

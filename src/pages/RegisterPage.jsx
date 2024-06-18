@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import inputText from '../components/atoms/Input/InputText.atom.jsx';
+
 
 export const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -60,6 +62,9 @@ export const RegisterPage = () => {
         <form onSubmit={handleSubmit}>
           <img src="./Recurso_12x.png" alt="chico" />
           <h2>Registro</h2>
+
+
+
           <input
             type="text"
             name="fullName"

@@ -38,6 +38,7 @@ export const ComponentPages = () => {
         // checked={selectedOption === 'option1'}
         // onChange={handleRadioChange}
         label="Option 1" />
+
       <Radio id="option2"
         name="example"
         value="option2"

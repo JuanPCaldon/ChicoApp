@@ -11,7 +11,7 @@ import './InputText.atom.css';
  * @param {string} [props.placeholder] - The placeholder text for the input text field.
  * @returns {JSX.Element} The rendered input text field.
  */
-const InputText = ({ id, name, placeholder, required }) => (
+const InputText = ({ id, name, placeholder, required, onChange }) => (
     // Render an input text field with provided value, onChange and placeholder props
     <input
         type="text"
@@ -19,6 +19,8 @@ const InputText = ({ id, name, placeholder, required }) => (
         name = {name}
         placeholder={placeholder} // Set the placeholder text for the input text field
         required= {required}
+        onChange={onChange}
+        //value={value}
         />
 );
 
@@ -26,7 +28,9 @@ InputText.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     placeholder: PropTypes.string,
-    required: PropTypes.bool
+    required: PropTypes.bool,
+    onChange: PropTypes.func
+    //value: PropTypes.string
 
 };
 
