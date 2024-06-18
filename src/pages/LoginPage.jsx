@@ -55,6 +55,7 @@ export const LoginPage = () => {
                     {/* <Heading level={1} className="custom-heading">
                         Iniciar Sesion
                     </Heading> */}
+                    <h1>Iniciar Sesion</h1>
 
                          <InputText 
                               name="IN-LG-Email" 
@@ -101,16 +102,10 @@ export const LoginPage = () => {
                             <Button 
                               className="primary" 
                               label="Ingresar" 
-                              type="button" 
-                              navigateTo={"/components "}
+                              type="submit" 
+                            
                               />
-
-                         
-                            <Link href="https://example.com" className="custom-link"
-                                      // onClick={handleLinkClick}
-                                      >
-                                      ¿No tienes cuenta?
-                                    </Link>
+                            <span>¿No tienes cuenta? </span>
 
                             <Button 
                              className="primary" 
